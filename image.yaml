@@ -1,9 +1,8 @@
-apiVersion: adi.io.my.domain/v1alpha1
 kind: Image
 metadata:
   name: image-sample
 spec:
-  clusterName:
+  clusterRef:
     name: cluster-sample
     namespace: assisted-installer
   sshPublicKey: mykey
