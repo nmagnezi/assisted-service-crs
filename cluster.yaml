@@ -5,7 +5,7 @@ metadata:
 spec:
   name: test-cluster
   openshiftVersion: "4.7"
-  clusterNetworkCidr: 10.128.0.0/14
+  clusterNetworkCIDR: 10.128.0.0/14
   clusterNetworkHostPrefix: 23
   pullSecretRef:
     name: pull-secret
