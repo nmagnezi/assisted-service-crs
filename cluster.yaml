@@ -10,3 +10,8 @@ spec:
   pullSecretRef:
     name: pull-secret
     namespace: assisted-installer
+  provisionRequirements:
+    controlPlaneAgents: 3
+    agentSelector:
+      matchLabels:
+        bla: aaa
