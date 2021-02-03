@@ -1,0 +1,36 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterDeployment
+metadata:
+  name: mycluster
+  namespace: assisted-installer
+spec:
+  baseDomain: hive.example.com
+  clusterName: mycluster
+  installStrategy:
+    agent:
+      networking:
+        clusterNetwork:
+          - cidr: 10.128.0.0/14
+            hostPrefix: 23
+        ServiceNetwork:
+          - 172.30.0.0/16
+      provisionRequirements:
+        controlPlaneAgents: 3
+        agentSelector:
+          matchLabels:
+            bla: aaa
+  platform:
+    agentBareMetal:
+      apiVIP: 1.2.3.8
+      apiVIPDNSName: ""
+      ingressVIP: 1.2.3.9
+      vipDHCPAllocation: false
+  provisioning:
+    imageSetRef:
+      name: openshift-v4.7.0
+    installConfigSecretRef:
+      name: mycluster-install-config
+    sshPrivateKeySecretRef:
+      name: mycluster-ssh-key
+  pullSecretRef:
+    name: pull-secret
