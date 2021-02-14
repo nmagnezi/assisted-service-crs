@@ -1,0 +1,13 @@
+apiVersion: adi.io.my.domain/v1alpha1
+kind: InstallEnv
+metadata:
+  name: myinstallenv
+spec:
+  clusterRef:
+    name: mycluster
+    namespace: assisted-installer
+  agentLabelSelector:
+    matchLabels:
+      bla: aaa
+  pullSecretRef:
+    name: pull-secret
