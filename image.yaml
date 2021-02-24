@@ -1,8 +1,0 @@
-kind: Image
-metadata:
-  name: image-sample
-spec:
-  clusterRef:
-    name: cluster-sample
-    namespace: assisted-installer
-  sshPublicKey: mykey
