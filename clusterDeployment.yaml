@@ -8,9 +8,9 @@ spec:
   clusterName: mycluster
   platform:
     agentBareMetal:
-      apiVIP: 1.2.3.8
-      ingressVIP: 1.2.3.9
-      #vipDHCPAllocation: true
+      apiVIP: ""
+      ingressVIP: ""
+      vipDHCPAllocation: Enabled
   provisioning:
     imageSetRef:
       name: openshift-v4.7.0
