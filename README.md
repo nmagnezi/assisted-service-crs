@@ -4,4 +4,4 @@
   
 * Current implementation: https://github.com/openshift/assisted-service/tree/master/internal/controller
 
-* **Important**: Examples are now placed in https://github.com/openshift/assisted-service/blob/master/docs/Kube-API-examples.md, we will no longer update this repository.
+* **Important**: Examples are now placed in https://github.com/openshift/assisted-service/blob/master/docs/Kube-API.md, we will no longer update this repository.
